@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>satranç1</title>
+	</head>
+	<body>
+		<canvas id="eren" width="600px" height="600px" style="border:1px solid;"></canvas>
+		<script type="text/javascript">
+			localStorage.setItem("x",135);
+			localStorage.setItem("y",135);
+			localStorage.setItem('tık',"0")
+			var tuval=document.getElementById("eren");
+			var cizim=tuval.getContext("2d");
+			var bşah=new Image();
+			tahta=[]
+			var image=new Image();
+			bşah.src="resim/beyazşah.jpg";
+			image.src="resim/tahta1.jpg";
+			image.onload=ar;
+			tuval.addEventListener("mousemove",or);
+			tuval.addEventListener("click",er);
+			function or(r){
+				if (localStorage.getItem("tık")=="1") {
+					temizle();
+					cizim.drawImage(image,0,0);
+					cizim.drawImage(bşah,r.x-35,r.y-35);
+				}
+			}
+			z=0;
+			t=0;
+			function er(e){
+			    x=localStorage.getItem("x");
+			    y=localStorage.getItem("y");
+				if (localStorage.getItem("tık")=="1") {
+					localStorage.setItem("tık","0");
+					localStorage.setItem("x",e.x);
+					localStorage.setItem("y",e.y);
+				}
+				else if (e.x<x+35&&e.x>x-35&&e.y<y+35&&e.y>y-35) {
+						localStorage.setItem("tık","1");
+						
+				}
+				console.log(e.x,e.y);
+			}		
+			var tık=0;
+			var tık1=0;
+			function ar(o){
+				cizim.drawImage(image,0,0);
+				cizim.drawImage(bşah,100,100);
+			}
+			function temizle(){
+				cizim.drawImage(image,0,0);
+			}
+		</script>
+	</body>
+</html>
