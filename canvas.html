@@ -18,13 +18,13 @@
 				window.location.href = "index.html";
 			}
 		</script>
-		<table border="1" align="center">
+		<table border="0" align="center">
 			<tr>
 				<td>
-					<table width="150px">
+					<table width="150px" valign="top">
 						<tr>
 							<td>
-								<p class="kutu">tık</p>
+								<p class="kutu">giriş bilgileri</p>
 							</td>
 						</tr>
 					</table>
@@ -33,17 +33,26 @@
 					<table width="900px" style="background-color:#f5f5dc;" valign="top">
 						<tr>
 							<td>
-								<h1>demek burayı gördün</h1>
-								<p>demek burayı gördün umarım buraya gelebilmek için uzun bir yol katetmen gerekebilir çünkü buraya direk 
-								gelmenin bir yolu daha vardı buraya gelmemeni umuyordum yüksek ihtimallede buraya gelemeyeceksin burası 
-								benim kişisel blogum o kadarda önemli değil eğer içerde ne olduğunu merak ediyorsan aşağıdaki düğmeye 
-								tıkla</p>
-								<button id="dugme">devamını gör</button>
+								<div id="yazı">
+									<h1>demek burayı gördün</h1>
+									<p>demek burayı gördün umarım buraya gelebilmek için uzun bir yol katetmen gerekebilir çünkü 
+									buraya direk gelmenin bir yolu daha vardı buraya gelmemeni umuyordum yüksek ihtimallede buraya
+									gelemeyeceksin burası 
+									benim kişisel blogum o kadarda önemli değil eğer içerde ne olduğunu merak ediyorsan aşağıdaki düğmeye 
+									tıkla</p>
+									<button id="dugme">devamını gör</button>
+								</div>
 							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 		</table>
+		<script>
+			function e(){
+				er=getElementById("yazı");
+				document.er.innerHTML="er";
+			}
+		</script>
 	</body>
 </html>
